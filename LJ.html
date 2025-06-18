@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>Long Jump Top 10</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      padding: 2rem;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    h1 {
+      color: #1D4721;
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      max-width: 700px;
+      background-color: white;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      margin-bottom: 2rem;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 12px;
+      text-align: center;
+    }
+    th {
+      background-color: #1D4721;
+      font-weight: bold;
+      color: white; /* 🔧 Fix: make header text white */
+    }
+    tbody tr:nth-child(even) {
+      background-color: #f9f9f9;
+    }
+    .active {
+      background-color: #d6f5d6 !important; /* Light green */
+      font-weight: bold;
+    }
+    .tag {
+      background-color: #28a745;
+      color: white;
+      padding: 2px 6px;
+      font-size: 0.75rem;
+      border-radius: 4px;
+      margin-left: 6px;
+    }
+    a.button {
+      text-decoration: none;
+      color: #fff;
+      background-color: #1D4721;
+      padding: 0.75rem 1.5rem;
+      border-radius: 5px;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+    a.button:hover {
+      background-color: #145017;
+    }
+  </style>
+</head>
+<body>
+  <h1>Long Jump Top 10</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>Rank</th>
+        <th>Athlete</th>
+        <th>Mark</th>
+        <th>Year</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>1</td><td>Taunja Disher</td><td>17'10.25"</td><td>2000</td></tr>
+      <tr><td>2</td><td>Nicole Berscheid</td><td>17'7"</td><td>2008</td></tr>
+      <tr><td>3</td><td>Holly Frie</td><td>17'5"</td><td>1990</td></tr>
+      <tr><td>4</td><td>Shelly Cipala</td><td>17'5"</td><td>NA</td></tr>
+      <tr><td>5</td><td>McKinzie Schulte</td><td>17'0"</td><td>2015</td></tr>
+      <tr class="active"><td>6</td><td>Rilee Breth <span class="tag">Active</span></td><td>16'10"</td><td>2024</td></tr>
+      <tr class="active"><td>7</td><td>Carly Mitchell <span class="tag">Active</span></td><td>16'9.75"</td><td>2024</td></tr>
+      <tr><td>8</td><td>Tricia Ebnet</td><td>16'8.5"</td><td>1997</td></tr>
+      <tr><td>9</td><td>Sara Stanoch</td><td>16'6.5"</td><td>1995</td></tr>
+      <tr><td>10</td><td>Amber Ehrlichmann</td><td>16'5.5"</td><td>1997</td></tr>
+    </tbody>
+  </table>
+  <a href="index.html" class="button">← Back to main page</a>
+</body>
+</html>
