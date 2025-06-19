@@ -14,132 +14,144 @@
     body {
       margin: 0;
       font-family: 'Titillium Web', sans-serif;
-      background: linear-gradient(to bottom, rgba(0,0,0,0.6), rgba(0,0,0,0.9)), 
+      background: 
+        linear-gradient(to bottom, rgba(0,0,0,0.6), rgba(0,0,0,0.8)),
         url('track_background.jpg') no-repeat center center fixed;
       background-size: cover;
-      color: white;
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
-    }
-
-    header {
-      background-color: rgba(0, 0, 0, 0.6);
-      padding: 1rem;
-      text-align: center;
-      font-size: 1.8rem;
-      font-weight: bold;
       color: #fff;
-      text-shadow: 0 0 8px #000;
-    }
-
-    .layout {
+      min-height: 100vh;
       display: flex;
-      flex-direction: row;
-      flex: 1;
-      overflow: hidden;
     }
 
-    nav {
-      width: 220px;
+    .sidebar {
       background-color: rgba(29, 71, 33, 0.95);
       padding: 1rem;
+      min-width: 220px;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      left: 0;
       overflow-y: auto;
+      z-index: 1000;
     }
 
-    nav h2 {
-      font-size: 1.2rem;
+    .sidebar h2 {
+      text-align: center;
+      margin-top: 0;
       margin-bottom: 1rem;
       color: #fff;
+      font-size: 1.5rem;
+      letter-spacing: 1px;
+    }
+
+    .sidebar a {
+      display: block;
+      padding: 0.75rem;
+      text-decoration: none;
+      color: #fff;
+      background-color: #1D4721;
+      border-radius: 6px;
+      font-weight: bold;
+      text-align: center;
+      transition: all 0.3s ease;
+    }
+
+    .sidebar a:hover {
+      background-color: #145017;
+    }
+
+    .content {
+      margin-left: 240px;
+      padding: 2rem;
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       text-align: center;
     }
 
-    nav a {
-      display: block;
-      padding: 0.6rem 1rem;
-      margin-bottom: 0.5rem;
-      background: rgba(255, 255, 255, 0.1);
-      color: #fff;
-      text-decoration: none;
-      border-radius: 8px;
-      font-weight: bold;
-      transition: background 0.3s ease;
+    .content h1 {
+      font-size: 2.5rem;
+      color: white;
+      text-shadow: 0 0 10px rgba(0,0,0,0.7);
     }
 
-    nav a:hover {
-      background: rgba(255, 255, 255, 0.2);
-    }
-
-    main {
-      flex: 1;
-      padding: 1rem;
-      background-color: rgba(255, 255, 255, 0.95);
-    }
-
-    iframe {
-      width: 100%;
-      height: 80vh;
-      border: none;
-      border-radius: 8px;
-      background-color: white;
+    /* Hamburger menu */
+    .hamburger {
+      display: none;
+      position: fixed;
+      top: 1rem;
+      left: 1rem;
+      font-size: 2rem;
+      color: white;
+      z-index: 2000;
+      cursor: pointer;
     }
 
     @media (max-width: 768px) {
-      .layout {
-        flex-direction: column;
+      .hamburger {
+        display: block;
       }
 
-      nav {
-        width: 100%;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
+      .sidebar {
+        transform: translateX(-100%);
+        transition: transform 0.3s ease;
+        width: 75%;
+        max-width: 280px;
       }
 
-      nav a {
-        margin: 0.25rem;
-        padding: 0.75rem 1rem;
-        flex: 1 1 40%;
-        text-align: center;
+      body.nav-open .sidebar {
+        transform: translateX(0);
       }
 
-      main {
-        padding: 0.5rem;
-      }
-
-      iframe {
-        height: 70vh;
+      .content {
+        margin-left: 0;
+        padding: 5rem 1.5rem 2rem;
       }
     }
   </style>
 </head>
 <body>
-  <header>Husker Girls Track & Field Top 10</header>
-  <div class="layout">
-    <nav>
-      <h2>Girls Top 10</h2>
-      <a href="100.html" target="content">100m</a>
-      <a href="200.html" target="content">200m</a>
-      <a href="4.html" target="content">400m</a>
-      <a href="800.html" target="content">800m</a>
-      <a href="1600.html" target="content">1600m</a>
-      <a href="3200.html" target="content">3200m</a>
-      <a href="100H.html" target="content">100H</a>
-      <a href="300H.html" target="content">300H</a>
-      <a href="4x1.html" target="content">4x100</a>
-      <a href="4x2.html" target="content">4x200</a>
-      <a href="4x4.html" target="content">4x400</a>
-      <a href="4x8.html" target="content">4x800</a>
-      <a href="SP.html" target="content">Shot Put</a>
-      <a href="Disc.html" target="content">Discus</a>
-      <a href="HJ.html" target="content">High Jump</a>
-      <a href="LJ.html" target="content">Long Jump</a>
-      <a href="TJ.html" target="content">Triple Jump</a>
-      <a href="PV.html" target="content">Pole Vault</a>
-    </nav>
-    <main>
-      <iframe name="content" src="100.html"></iframe>
-    </main>
+
+  <div class="hamburger" onclick="document.body.classList.toggle('nav-open')">☰</div>
+
+  <div class="sidebar">
+    <h2>Girls Top 10</h2>
+    <a href="100.html">100m</a>
+    <a href="200.html">200m</a>
+    <a href="4.html">400m</a>
+    <a href="800.html">800m</a>
+    <a href="1600.html">1600m</a>
+    <a href="3200.html">3200m</a>
+    <a href="100H.html">100H</a>
+    <a href="300H.html">300H</a>
+    <a href="4x1.html">4x100</a>
+    <a href="4x2.html">4x200</a>
+    <a href="4x4.html">4x400</a>
+    <a href="4x8.html">4x800</a>
+    <a href="SP.html">Shot Put</a>
+    <a href="Disc.html">Discus</a>
+    <a href="HJ.html">High Jump</a>
+    <a href="LJ.html">Long Jump</a>
+    <a href="TJ.html">Triple Jump</a>
+    <a href="PV.html">Pole Vault</a>
   </div>
+
+  <div class="content">
+    <h1>Welcome to the Husker Girls<br> Track & Field Top 10</h1>
+  </div>
+
+  <script>
+    // Close the nav menu when a link is clicked (mobile)
+    document.querySelectorAll('.sidebar a').forEach(link => {
+      link.addEventListener('click', () => {
+        document.body.classList.remove('nav-open');
+      });
+    });
+  </script>
+
 </body>
 </html>
