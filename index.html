@@ -7,144 +7,164 @@
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@700&display=swap');
 
-    html {
-      font-size: 100%;
-    }
-
-    @media (max-width: 400px) {
-      html {
-        font-size: 90%;
-      }
+    * {
+      box-sizing: border-box;
     }
 
     body {
       margin: 0;
-      padding: 2rem;
       font-family: 'Titillium Web', sans-serif;
-      background: 
-        linear-gradient(to bottom, rgba(0,0,0,0.6), rgba(0,0,0,0.8)),
+      background: linear-gradient(to bottom, rgba(0,0,0,0.6), rgba(0,0,0,0.9)), 
         url('track_background.jpg') no-repeat center center fixed;
       background-size: cover;
-      color: #fff;
+      color: white;
       display: flex;
       flex-direction: column;
-      align-items: center;
       min-height: 100vh;
     }
 
-    .logo {
-      max-width: 160px;
-      margin-bottom: 1rem;
-      filter: drop-shadow(2px 2px 4px #000);
-    }
-
-    h1 {
-      font-size: 2.5rem;
-      text-align: center;
-      margin-bottom: 2rem;
-      color: #fff;
-      text-shadow: 0 0 10px rgba(0,0,0,0.8);
-    }
-
-    .columns {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 2rem;
-      width: 100%;
-      max-width: 1000px;
-      margin-top: 1rem;
-    }
-
-    .column {
-      flex: 1;
-      min-width: 200px;
-      display: flex;
-      flex-direction: column;
-      gap: 0.75rem;
-    }
-
-    a {
-      display: block;
-      text-align: center;
+    header {
+      background-color: rgba(0, 0, 0, 0.6);
       padding: 1rem;
-      background: rgba(29, 71, 33, 0.85);
-      color: white;
-      text-decoration: none;
-      border-radius: 12px;
-      transition: all 0.3s ease;
+      text-align: center;
+      font-size: 1.8rem;
       font-weight: bold;
-      letter-spacing: 0.5px;
-      backdrop-filter: blur(5px);
-      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-      white-space: normal;
-      word-break: break-word;
+      color: #fff;
+      text-shadow: 0 0 8px #000;
     }
 
-    a:hover {
-      background-color: rgba(20, 80, 23, 0.95);
-      transform: scale(1.05);
-      box-shadow: 0 0 10px #1D4721;
+    .container {
+      display: flex;
+      flex: 1;
+      overflow: hidden;
     }
 
-    @media (max-width: 600px) {
-      body {
-        padding: 1rem;
-      }
+    nav {
+      width: 240px;
+      background-color: rgba(29, 71, 33, 0.95);
+      padding: 1rem;
+      overflow-y: auto;
+      transition: transform 0.3s ease;
+    }
 
-      h1 {
-        font-size: 1.8rem;
-      }
+    nav h2 {
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+      color: #fff;
+      text-align: center;
+    }
 
-      .columns {
+    nav a {
+      display: block;
+      padding: 0.75rem 1rem;
+      margin-bottom: 0.5rem;
+      background: rgba(255, 255, 255, 0.1);
+      color: #fff;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: background 0.3s ease;
+    }
+
+    nav a:hover {
+      background: rgba(255, 255, 255, 0.2);
+    }
+
+    main {
+      flex: 1;
+      padding: 1rem;
+      background-color: rgba(255, 255, 255, 0.95);
+    }
+
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+      border-radius: 8px;
+      background-color: white;
+      min-height: 85vh;
+    }
+
+    /* Hamburger menu styles */
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+      color: white;
+      position: absolute;
+      top: 1rem;
+      left: 1rem;
+      z-index: 1000;
+    }
+
+    @media (max-width: 768px) {
+      .container {
         flex-direction: column;
-        align-items: stretch;
-        gap: 1rem;
       }
 
-      .column {
-        width: 100%;
+      nav {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        transform: translateX(-100%);
+        z-index: 999;
       }
 
-      a {
-        font-size: 1rem;
-        padding: 0.9rem;
+      nav.open {
+        transform: translateX(0);
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      main {
+        padding-top: 4rem;
+      }
+
+      iframe {
+        min-height: 75vh;
       }
     }
   </style>
 </head>
 <body>
-
-  <h1>Husker Girls Track & Field Top 10</h1>
-
-  <div class="columns">
-    <div class="column">
-      <a href="100.html">100m</a>
-      <a href="200.html">200m</a>
-      <a href="4.html">400m</a>
-      <a href="800.html">800m</a>
-      <a href="1600.html">1600m</a>
-      <a href="3200.html">3200m</a>
-      <a href="100H.html">100H</a>
-      <a href="300H.html">300H</a>
-    </div>
-
-    <div class="column">
-      <a href="4x1.html">4x100</a>
-      <a href="4x2.html">4x200</a>
-      <a href="4x4.html">4x400</a>
-      <a href="4x8.html">4x800</a>
-    </div>
-
-    <div class="column">
-      <a href="SP.html">Shot Put</a>
-      <a href="Disc.html">Discus</a>
-      <a href="HJ.html">High Jump</a>
-      <a href="LJ.html">Long Jump</a>
-      <a href="TJ.html">Triple Jump</a>
-      <a href="PV.html">Pole Vault</a>
-    </div>
+  <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+  <header>Husker Girls Track & Field Top 10</header>
+  <div class="container">
+    <nav id="sidebar">
+      <h2>Girls Top 10</h2>
+      <a href="100.html" target="content">100m</a>
+      <a href="200.html" target="content">200m</a>
+      <a href="4.html" target="content">400m</a>
+      <a href="800.html" target="content">800m</a>
+      <a href="1600.html" target="content">1600m</a>
+      <a href="3200.html" target="content">3200m</a>
+      <a href="100H.html" target="content">100H</a>
+      <a href="300H.html" target="content">300H</a>
+      <a href="4x1.html" target="content">4x100</a>
+      <a href="4x2.html" target="content">4x200</a>
+      <a href="4x4.html" target="content">4x400</a>
+      <a href="4x8.html" target="content">4x800</a>
+      <a href="SP.html" target="content">Shot Put</a>
+      <a href="Disc.html" target="content">Discus</a>
+      <a href="HJ.html" target="content">High Jump</a>
+      <a href="LJ.html" target="content">Long Jump</a>
+      <a href="TJ.html" target="content">Triple Jump</a>
+      <a href="PV.html" target="content">Pole Vault</a>
+    </nav>
+    <main>
+      <iframe name="content" src="100.html"></iframe>
+    </main>
   </div>
 
+  <script>
+    function toggleMenu() {
+      const nav = document.getElementById('sidebar');
+      nav.classList.toggle('open');
+    }
+  </script>
 </body>
 </html>
