@@ -33,18 +33,18 @@
       text-shadow: 0 0 8px #000;
     }
 
-    .container {
+    .layout {
       display: flex;
+      flex-direction: row;
       flex: 1;
       overflow: hidden;
     }
 
     nav {
-      width: 240px;
+      width: 220px;
       background-color: rgba(29, 71, 33, 0.95);
       padding: 1rem;
       overflow-y: auto;
-      transition: transform 0.3s ease;
     }
 
     nav h2 {
@@ -56,7 +56,7 @@
 
     nav a {
       display: block;
-      padding: 0.75rem 1rem;
+      padding: 0.6rem 1rem;
       margin-bottom: 0.5rem;
       background: rgba(255, 255, 255, 0.1);
       color: #fff;
@@ -78,63 +78,45 @@
 
     iframe {
       width: 100%;
-      height: 100%;
+      height: 80vh;
       border: none;
       border-radius: 8px;
       background-color: white;
-      min-height: 85vh;
-    }
-
-    /* Hamburger menu styles */
-    .menu-toggle {
-      display: none;
-      background: none;
-      border: none;
-      font-size: 1.5rem;
-      color: white;
-      position: absolute;
-      top: 1rem;
-      left: 1rem;
-      z-index: 1000;
     }
 
     @media (max-width: 768px) {
-      .container {
+      .layout {
         flex-direction: column;
       }
 
       nav {
-        position: absolute;
-        top: 0;
-        left: 0;
-        height: 100%;
-        transform: translateX(-100%);
-        z-index: 999;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
       }
 
-      nav.open {
-        transform: translateX(0);
-      }
-
-      .menu-toggle {
-        display: block;
+      nav a {
+        margin: 0.25rem;
+        padding: 0.75rem 1rem;
+        flex: 1 1 40%;
+        text-align: center;
       }
 
       main {
-        padding-top: 4rem;
+        padding: 0.5rem;
       }
 
       iframe {
-        min-height: 75vh;
+        height: 70vh;
       }
     }
   </style>
 </head>
 <body>
-  <button class="menu-toggle" onclick="toggleMenu()">☰</button>
   <header>Husker Girls Track & Field Top 10</header>
-  <div class="container">
-    <nav id="sidebar">
+  <div class="layout">
+    <nav>
       <h2>Girls Top 10</h2>
       <a href="100.html" target="content">100m</a>
       <a href="200.html" target="content">200m</a>
@@ -159,12 +141,5 @@
       <iframe name="content" src="100.html"></iframe>
     </main>
   </div>
-
-  <script>
-    function toggleMenu() {
-      const nav = document.getElementById('sidebar');
-      nav.classList.toggle('open');
-    }
-  </script>
 </body>
 </html>
