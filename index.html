@@ -30,6 +30,30 @@
       flex-direction: column;
       align-items: center;
       min-height: 100vh;
+      position: relative;
+    }
+
+    .top-link {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      background: rgba(29, 71, 33, 0.85);
+      color: white;
+      text-decoration: none;
+      padding: 0.75rem 1.25rem;
+      border-radius: 12px;
+      font-weight: bold;
+      letter-spacing: 0.5px;
+      backdrop-filter: blur(5px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+      transition: all 0.3s ease;
+      z-index: 1000;
+    }
+
+    .top-link:hover {
+      background-color: rgba(20, 80, 23, 0.95);
+      transform: scale(1.05);
+      box-shadow: 0 0 10px #1D4721;
     }
 
     .logo {
@@ -110,10 +134,17 @@
         font-size: 1rem;
         padding: 0.9rem;
       }
+
+      .top-link {
+        font-size: 0.9rem;
+        padding: 0.6rem 1rem;
+      }
     }
   </style>
 </head>
 <body>
+
+  <a href="https://holdingfordhuskerstf.github.io/BoysTop5/index.html" class="top-link">← Boys Top 5</a>
 
   <h1>Husker Girls Track & Field Top 10</h1>
 
