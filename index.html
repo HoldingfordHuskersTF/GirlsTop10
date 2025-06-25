@@ -30,13 +30,11 @@
       flex-direction: column;
       align-items: center;
       min-height: 100vh;
-      position: relative;
     }
 
-    .top-link {
-      position: absolute;
-      top: 20px;
-      left: 20px;
+    .nav-button {
+      align-self: flex-start;
+      margin-bottom: 1rem;
       background: rgba(29, 71, 33, 0.85);
       color: white;
       text-decoration: none;
@@ -47,19 +45,12 @@
       backdrop-filter: blur(5px);
       box-shadow: 0 4px 12px rgba(0,0,0,0.3);
       transition: all 0.3s ease;
-      z-index: 1000;
     }
 
-    .top-link:hover {
+    .nav-button:hover {
       background-color: rgba(20, 80, 23, 0.95);
       transform: scale(1.05);
       box-shadow: 0 0 10px #1D4721;
-    }
-
-    .logo {
-      max-width: 160px;
-      margin-bottom: 1rem;
-      filter: drop-shadow(2px 2px 4px #000);
     }
 
     h1 {
@@ -135,7 +126,7 @@
         padding: 0.9rem;
       }
 
-      .top-link {
+      .nav-button {
         font-size: 0.9rem;
         padding: 0.6rem 1rem;
       }
@@ -144,7 +135,7 @@
 </head>
 <body>
 
-  <a href="https://holdingfordhuskerstf.github.io/BoysTop5/index.html" class="top-link">← Boys Top 5</a>
+  <a href="https://holdingfordhuskerstf.github.io/BoysTop5/index.html" class="nav-button">← Boys Top 5</a>
 
   <h1>Husker Girls Track & Field Top 10</h1>
 
