@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset="UTF-8" />
-  <title>Pole Vault Top 10</title>
+  <title>Triple Jump Top 10</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -42,7 +42,7 @@
       background-color: #f9f9f9;
     }
     tbody tr.active {
-      background-color: #d6f5d6 !important;
+      background-color: #d6f5d6 !important; /* Light green */
       font-weight: bold;
       color: #1D4721;
     }
@@ -63,21 +63,18 @@
       margin-bottom: 2rem;
     }
     .buttons a {
-      flex: 1;
-      text-align: center;
-    }
-    a.button {
       text-decoration: none;
       color: #fff;
       background-color: #1D4721;
       padding: 0.75rem 1.5rem;
       border-radius: 5px;
       font-weight: bold;
-      transition: background-color 0.3s ease;
+      text-align: center;
       display: inline-block;
-      min-width: 120px;
+      min-width: 120px; /* consistent size */
+      transition: background-color 0.3s ease;
     }
-    a.button:hover {
+    .buttons a:hover {
       background-color: #145017;
     }
   </style>
