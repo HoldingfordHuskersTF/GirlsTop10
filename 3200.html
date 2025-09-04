@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset="UTF-8" />
-  <title>3200 Top 10</title>
+  <title>3200m Top 10</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -35,7 +35,6 @@
       border: 1px solid #ccc;
       padding: 12px;
       text-align: center;
-      color: #1D4721;
     }
 
     th {
@@ -62,6 +61,13 @@
       margin-left: 6px;
     }
 
+    .buttons {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
     a.button {
       text-decoration: none;
       color: #fff;
@@ -78,7 +84,8 @@
   </style>
 </head>
 <body>
-  <h1>3200 Top 10</h1>
+  <h1>3200m Top 10</h1>
+
   <table>
     <thead>
       <tr>
@@ -101,6 +108,11 @@
       <tr><td>10</td><td>Amanda Douvier</td><td>12:50.50</td><td>2015</td></tr>
     </tbody>
   </table>
-  <a href="index.html" class="button">← Back to Main Page</a>
+
+  <div class="buttons">
+    <a href="1600.html" class="button">← 1600m</a>
+    <a href="index.html" class="button">Back to Main Page</a>
+    <a href="100H.html" class="button">100H →</a>
+  </div>
 </body>
 </html>
