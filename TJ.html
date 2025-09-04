@@ -41,9 +41,8 @@
     tbody tr:nth-child(even) {
       background-color: #f9f9f9;
     }
-    /* Consistent active row style */
     tbody tr.active {
-      background-color: #d6f5d6 !important; /* Light green */
+      background-color: #d6f5d6 !important;
       font-weight: bold;
       color: #1D4721;
     }
@@ -56,6 +55,17 @@
       margin-left: 6px;
       vertical-align: middle;
     }
+    .buttons {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-bottom: 2rem;
+    }
+    .buttons a {
+      flex: 1;
+      text-align: center;
+    }
     a.button {
       text-decoration: none;
       color: #fff;
@@ -64,6 +74,8 @@
       border-radius: 5px;
       font-weight: bold;
       transition: background-color 0.3s ease;
+      display: inline-block;
+      min-width: 120px;
     }
     a.button:hover {
       background-color: #145017;
@@ -72,6 +84,7 @@
 </head>
 <body>
   <h1>Triple Jump Top 10</h1>
+
   <table>
     <thead>
       <tr>
@@ -94,6 +107,12 @@
       <tr><td>10</td><td>Summer Storm</td><td>32'9.5"</td><td>2015</td></tr>
     </tbody>
   </table>
-  <a href="index.html" class="button">← Back to main page</a>
+
+  <div class="buttons">
+    <a href="LJ.html" class="button">← Long Jump</a>
+    <a href="index.html" class="button">← Back to Main Page</a>
+    <a href="PV.html" class="button">Pole Vault →</a>
+  </div>
+
 </body>
 </html>
