@@ -28,7 +28,6 @@
       background-color: white;
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
       margin-bottom: 2rem;
-      color: #1D4721;
     }
 
     th, td {
@@ -62,6 +61,13 @@
       margin-left: 6px;
     }
 
+    .buttons {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
     a.button {
       text-decoration: none;
       color: #fff;
@@ -79,6 +85,7 @@
 </head>
 <body>
   <h1>300H Top 10</h1>
+
   <table>
     <thead>
       <tr>
@@ -101,6 +108,11 @@
       <tr class="active"><td>10</td><td>Kylee Konsor <span class="tag">Active</span></td><td>50.23</td><td>2025</td></tr>
     </tbody>
   </table>
-  <a href="index.html" class="button">← Back to Main Page</a>
+
+  <div class="buttons">
+    <a href="100H.html" class="button">← 100H</a>
+    <a href="index.html" class="button">Back to Main Page</a>
+    <a href="4x100.html" class="button">4x100 →</a>
+  </div>
 </body>
 </html>
