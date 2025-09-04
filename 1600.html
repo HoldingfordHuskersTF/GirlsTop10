@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>1600 Top 10</title>
+  <title>1600m Top 10</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -35,17 +35,37 @@
       border: 1px solid #ccc;
       padding: 12px;
       text-align: center;
-      color: #1D4721;
     }
 
     th {
       background-color: #1D4721;
       font-weight: bold;
-      color: white; /* 🔧 Fix: make header text white */
+      color: white;
     }
 
     tbody tr:nth-child(even) {
       background-color: #f9f9f9;
+    }
+
+    .active {
+      background-color: #d6f5d6 !important;
+      font-weight: bold;
+    }
+
+    .tag {
+      background-color: #28a745;
+      color: white;
+      padding: 2px 6px;
+      font-size: 0.75rem;
+      border-radius: 4px;
+      margin-left: 6px;
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 1rem;
     }
 
     a.button {
@@ -64,7 +84,8 @@
   </style>
 </head>
 <body>
-  <h1>1600 Top 10</h1>
+  <h1>1600m Top 10</h1>
+
   <table>
     <thead>
       <tr>
@@ -87,6 +108,11 @@
       <tr><td>10</td><td>Ella Benson</td><td>5:57.54</td><td>2022</td></tr>
     </tbody>
   </table>
-  <a href="index.html" class="button">← Back to Main Page</a>
+
+  <div class="buttons">
+    <a href="800.html" class="button">← 800m</a>
+    <a href="index.html" class="button">Back to Main Page</a>
+    <a href="3200.html" class="button">3200m →</a>
+  </div>
 </body>
 </html>
