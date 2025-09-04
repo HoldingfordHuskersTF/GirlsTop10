@@ -12,6 +12,7 @@
       display: flex;
       flex-direction: column;
       align-items: center;
+      color: #1D4721;
     }
     h1 {
       color: #1D4721;
@@ -25,6 +26,7 @@
       background-color: white;
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
       margin-bottom: 2rem;
+      color: #1D4721;
     }
     th, td {
       border: 1px solid #ccc;
@@ -34,14 +36,15 @@
     th {
       background-color: #1D4721;
       font-weight: bold;
-      color: white; /* 🔧 Fix: make header text white */
+      color: white;
     }
     tbody tr:nth-child(even) {
       background-color: #f9f9f9;
     }
-    .active {
-      background-color: #d6f5d6 !important; /* Light green */
+    tbody tr.active {
+      background-color: #d6f5d6 !important;
       font-weight: bold;
+      color: #1D4721;
     }
     .tag {
       background-color: #28a745;
@@ -50,6 +53,18 @@
       font-size: 0.75rem;
       border-radius: 4px;
       margin-left: 6px;
+      vertical-align: middle;
+    }
+    .buttons {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-bottom: 2rem;
+    }
+    .buttons a {
+      flex: 1;
+      text-align: center;
     }
     a.button {
       text-decoration: none;
@@ -59,6 +74,8 @@
       border-radius: 5px;
       font-weight: bold;
       transition: background-color 0.3s ease;
+      display: inline-block;
+      min-width: 120px;
     }
     a.button:hover {
       background-color: #145017;
@@ -67,6 +84,7 @@
 </head>
 <body>
   <h1>Pole Vault Top 10</h1>
+
   <table>
     <thead>
       <tr>
@@ -91,6 +109,12 @@
       <tr><td>10</td><td>Amelia Kahlhamer</td><td>7'6"</td><td>2017</td></tr>
     </tbody>
   </table>
-  <a href="index.html" class="button">← Back to main page</a>
+
+  <div class="buttons">
+    <a href="TJ.html" class="button">← Triple Jump</a>
+    <a href="index.html" class="button">← Back to Main Page</a>
+    <a href="100.html" class="button">100m →</a>
+  </div>
+
 </body>
 </html>
