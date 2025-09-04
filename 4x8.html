@@ -41,11 +41,18 @@
     th {
       background-color: #1D4721;
       font-weight: bold;
-      color: white; /* 🔧 Fix: make header text white */
+      color: white;
     }
 
     tbody tr:nth-child(even) {
       background-color: #f9f9f9;
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 1rem;
     }
 
     a.button {
@@ -87,6 +94,11 @@
       <tr><td>10</td><td>NaN</td><td>10:16.07</td><td>2014</td></tr>
     </tbody>
   </table>
-  <a href="index.html" class="button">← Back to Main Page</a>
+
+  <div class="buttons">
+    <a href="4x4.html" class="button">← 4x400</a>
+    <a href="index.html" class="button">Back to Main Page</a>
+    <a href="sp.html" class="button">Shot Put →</a>
+  </div>
 </body>
 </html>
