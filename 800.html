@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset="UTF-8" />
-  <title>800 Top 10</title>
+  <title>800m Top 10</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -61,6 +61,13 @@
       margin-left: 6px;
     }
 
+    .buttons {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
     a.button {
       text-decoration: none;
       color: #fff;
@@ -77,7 +84,8 @@
   </style>
 </head>
 <body>
-  <h1>800 Top 10</h1>
+  <h1>800m Top 10</h1>
+
   <table>
     <thead>
       <tr>
@@ -100,6 +108,11 @@
       <tr><td>10</td><td>Emily Wolter</td><td>2:28.90</td><td>2014</td></tr>
     </tbody>
   </table>
-  <a href="index.html" class="button">← Back to main page</a>
+
+  <div class="buttons">
+    <a href="400.html" class="button">← 400m</a>
+    <a href="index.html" class="button">Back to Main Page</a>
+    <a href="1600.html" class="button">1600m →</a>
+  </div>
 </body>
 </html>
