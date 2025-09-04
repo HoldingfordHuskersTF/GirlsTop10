@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>100 Top 10</title>
+  <title>100m Top 10</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -38,7 +38,7 @@
     th {
       background-color: #1D4721;
       font-weight: bold;
-      color: white; /* 🔧 Fix: make header text white */
+      color: white;
     }
 
     tbody tr:nth-child(even) {
@@ -59,6 +59,13 @@
       margin-left: 6px;
     }
 
+    .button-container {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
     a.button {
       text-decoration: none;
       color: #fff;
@@ -75,7 +82,7 @@
   </style>
 </head>
 <body>
-  <h1>100 Top 10</h1>
+  <h1>100m Top 10</h1>
 
   <table>
     <thead>
@@ -100,6 +107,10 @@
     </tbody>
   </table>
 
-  <a href="index.html" class="button">← Back to Main Page</a>
+  <div class="button-container">
+    <a href="PV.html" class="button">← Pole Vault</a>
+    <a href="index.html" class="button">Main Page</a>
+    <a href="200.html" class="button">200m →</a>
+  </div>
 </body>
 </html>
