@@ -12,10 +12,10 @@
       display: flex;
       flex-direction: column;
       align-items: center;
+      color: #1D4721;
     }
 
     h1 {
-      color: #1D4721;
       text-align: center;
       margin-bottom: 1rem;
     }
@@ -46,7 +46,7 @@
     }
 
     .active {
-      background-color: #d6f5d6 !important; /* Light green */
+      background-color: #d6f5d6 !important;
       font-weight: bold;
     }
 
@@ -57,6 +57,13 @@
       font-size: 0.75rem;
       border-radius: 4px;
       margin-left: 6px;
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 1rem;
     }
 
     a.button {
@@ -96,12 +103,14 @@
       <tr><td>7</td><td>Nancy Notsch</td><td>5'2"</td><td>NA</td></tr>
       <tr><td>8</td><td>Taunja Disher</td><td>5'0"</td><td>2001</td></tr>
       <tr><td>9</td><td>Rachel Hellmann</td><td>4'11"</td><td>2018</td></tr>
-      <tr><td>9</td><td>Corrie Ethen</td><td>4'11"</td><td>2017</td></tr>
-      <tr><td>9</td><td>Sunni Ebnet</td><td>4'11"</td><td>2016</td></tr>
-      <tr><td>9</td><td>Hailey Koopmeiners</td><td>4'11"</td><td>2015</td></tr>
+      <tr><td>10</td><td>Corrie Ethen</td><td>4'11"</td><td>2017</td></tr>
     </tbody>
   </table>
 
-  <a href="index.html" class="button">← Back to Main Page</a>
+  <div class="buttons">
+    <a href="Disc.html" class="button">← Discus</a>
+    <a href="index.html" class="button">Back to Main Page</a>
+    <a href="LJ.html" class="button">Long Jump →</a>
+  </div>
 </body>
 </html>
