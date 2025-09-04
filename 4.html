@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset="UTF-8" />
-  <title>400 Top 10</title>
+  <title>400m Top 10</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -26,7 +26,7 @@
       width: 100%;
       max-width: 700px;
       background-color: white;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
       margin-bottom: 2rem;
       color: #1D4721;
     }
@@ -48,18 +48,11 @@
       background-color: #f9f9f9;
     }
 
-    .active {
-      background-color: #d6f5d6 !important;
-      font-weight: bold;
-    }
-
-    .tag {
-      background-color: #28a745;
-      color: white;
-      padding: 2px 6px;
-      font-size: 0.75rem;
-      border-radius: 4px;
-      margin-left: 6px;
+    .buttons {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 1rem;
     }
 
     a.button {
@@ -78,7 +71,8 @@
   </style>
 </head>
 <body>
-  <h1>400 Top 10</h1>
+  <h1>400m Top 10</h1>
+
   <table>
     <thead>
       <tr>
@@ -91,16 +85,21 @@
     <tbody>
       <tr><td>1</td><td>Shanda Larsen</td><td>56.62</td><td>2002</td></tr>
       <tr><td>2</td><td>Jenny Olson</td><td>58.40</td><td>1991</td></tr>
-      <tr><td>3</td><td>Sue Sand</td><td>59.50</td><td>1980</td></tr>
-      <tr><td>4</td><td>Marie Sobania</td><td>60.00</td><td>1980</td></tr>
-      <tr class="active"><td>5</td><td>Brenna Konsor <span class="tag">Active</span></td><td>60.08</td><td>2025</td></tr>
-      <tr><td>6</td><td>Holly Frie</td><td>60.20</td><td>1989</td></tr>
-      <tr class="active"><td>7</td><td>Maggie Gross <span class="tag">Active</span></td><td>61.03</td><td>2025</td></tr>
+      <tr><td>3</td><td>Sue Sand</td><td>59.74</td><td>1980</td></tr>
+      <tr><td>4</td><td>Marie Sobania</td><td>60.24</td><td>1980</td></tr>
+      <tr><td>5</td><td>Brenna Konsor</td><td>60.08</td><td>2025</td></tr>
+      <tr><td>6</td><td>Holly Frie</td><td>60.44</td><td>1989</td></tr>
+      <tr><td>7</td><td>Maggie Gross</td><td>61.03</td><td>2025</td></tr>
       <tr><td>8</td><td>Rachael Preusser</td><td>61.56</td><td>2014</td></tr>
       <tr><td>9</td><td>Arianna Vasilj</td><td>62.90</td><td>2014</td></tr>
-      <tr class="active"><td>10</td><td>Angelica Diakite <span class="tag">Active</span></td><td>63.47</td><td>2025</td></tr>
+      <tr><td>10</td><td>Angelica Diakite</td><td>63.47</td><td>2025</td></tr>
     </tbody>
   </table>
-  <a href="index.html" class="button">← Back to Main Page</a>
+
+  <div class="buttons">
+    <a href="200.html" class="button">← 200m</a>
+    <a href="index.html" class="button">Back to Main Page</a>
+    <a href="800.html" class="button">800m →</a>
+  </div>
 </body>
 </html>
